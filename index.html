@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir en Hoja Tamaño Carta</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!--Aqui va el header-->
+    <header>
+        <img src="./img/logoCinepolis.png" alt="Logo Cin&eacute;polis">
+    </header>
+    <!--Aqui van los contenedor de informacion de la pelicula-->
+    <div class="contenido">
+        <!--Contenedor Imagen-->
+        <div id="contenedor" onclick="seleccionarImagen()" class="contenedorImg item">
+            <input type="file" id="inputImagen" style="display: none;" accept="image/*">
+            <img id="imagenSeleccionada" src="" alt="Imagen seleccionada">
+        </div>
+        <div class="contenidoParteDos item">
+                 <!-- Contenedor Informacion-->
+                <div class="contenedorInformacion">
+                    <div class="contenedorTitulo">
+                        <input type="text" name="tituloPelicula" class="tituloPelicula" placeholder="Ingresar Titulo de la Pelicula">
+                    </div>
+                    <div class="contenedorSinopsis">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Ingresar Sinopsis"></textarea>
+                    </div>
+                    <div class="contenedorDirector">
+                        <p class="directorActor">Director</p>
+                        <input type="text" name="director" id="" placeholder="Ingresar nombre del Director" class="directorActor">
+                    </div>
+                    <div class="contenedorActores">
+                        <p class="directorActor">Actores</p>
+                        <input type="text" name="actores" id="" placeholder="Ingresar Actores" class="directorActor">
+                    </div>
+                </div>
+                <!--Contenedor Especificaciones de la Pelicula-->
+                <div class="contenedorDatos">
+                    <div>
+                        <p class="parrafosDatos">G&eacute;nero</p>
+                        <select name="" id="" class="genero">
+                            <option value="">Escoger</option>
+                            <option value="">Drama</option>
+                            <option value="">Acci&oacute;n</option>
+                            <option value="">Comedia</option>
+                            <option value="">Aventura</option>
+                            <option value="">Ficci&oacute;n</option>
+                            <option value="">Fantas&iacute;a</option>
+                            <option value="">Thriller</option>
+                            <option value="">Horror</option>
+                            <option value="">Romance</option>
+                            <option value="">Animaci&oacute;n</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="parrafosDatos">Clasificaci&oacute;n</p>
+                        <select name="" id="" class="clasificacion">
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">B12</option>
+                            <option value="">B15</option>
+                            <option value="">C</option>
+                        </select>
+                    </div>
+                   <div>
+                        <p class="parrafosDatos">Formato</p>
+                        <select name="" id="" class="formato">
+                            <option value="">2D</ooption>
+                            <option value="">3D</ooption>
+                        </select>
+                   </div>
+                    <div>
+                        <p class="parrafosDatos">Duraci&oacute;n</p>
+                        <input type="text" id="hora" placeholder="Duraci&oacute;n">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--AQUI VAN LOS HORARIOS-->
+    <div id="horarios">
+    </div>
+    <div class="btnOpciones">
+        <button id="btnCrearEncabezado" class="abc">Crear Encabezado</button>
+    </div>
+    <button onclick="imprimir()" class="abc">Imprimir</button>
+    <script src="./js/functions.js"></script>
+</body>
+</html>
