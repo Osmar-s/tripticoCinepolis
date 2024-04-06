@@ -1,0 +1,217 @@
+@media print {
+    /* Tamaño de la hoja carta */
+    @page {
+        size: letter;
+        margin: 1.5cm; /* Establece un margen de 1 cm en todos los lados */
+    }
+    body{
+        margin: 0; /* Asegúrate de que el cuerpo no tenga márgenes */
+    }
+
+    .contenidoParteDos{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #horarios{
+        margin-top: 40px;
+    }
+    tbody input[type="text"]{
+        text-align: center;
+        width: 60px;
+    }
+
+    .abc{
+        display: none;
+    }
+}
+
+header{
+    background-color: #012368;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
+.contenido{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenidoParteDos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedorImg img{
+    width: 168px;
+    height: 256px;
+}
+
+.contenedorInformacion{
+    padding: 0px 10px;
+}
+
+.contenido input[type="text"]{
+    border: none;
+    width: 332px;
+}
+
+.tituloPelicula{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Calibri';
+    font-variant: small-caps;
+}
+
+.directorActor{
+    font-size: 14px;
+    font-family: 'Calibri';
+    box-sizing: border-box;
+}
+
+.contenedorSinopsis{
+    padding-top: 5px;
+}
+
+textarea{
+    width: 332px;
+    height: 120px;
+    resize: none;
+    font-size: 14px;
+    font-family: 'Calibri Light';
+    border: none;
+}
+
+p, input[type="text"] {
+    margin: 0;
+}
+
+.contenedorDirector{
+    margin:5px 0px;
+}
+
+.parrafosDatos{
+    font-size: 16px;
+    font-family: 'Calibri Light';
+}
+
+.contenedorDatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contenedorDatos select{
+    -webkit-appearance: none; /* Para navegadores webkit como Chrome y Safari */
+    -moz-appearance: none; /* Para navegadores Mozilla como Firefox */
+    appearance: none; /* Estándar */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #012368;
+    color: white;
+    font-weight: bold;
+}
+
+.genero{
+    padding: 3px 6px;
+    font-variant: small-caps;
+}
+
+.clasificacion{
+    padding: 2px 4px;
+}
+
+.formato{
+    padding: 3px 5px;
+}
+
+#hora{
+    width: 60px;
+    padding: 2px 4px;
+    background-color:#012368;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*
+Alto Imagenes: 7cm = 256 px;
+ancho imagenes: 4.44cm = 168px;
+*/
+
+/*ESTILOS PARA LAS TABLAS*/
+.texto{
+    font-size: 18px;
+    font-family: 'Calibri';
+    font-weight: bold;
+}
+
+.ejemplo{
+    font-size: 14px;
+    font-family: 'Calibri Light';
+}
+
+
+#horarios input[type="text"]{
+    border: none;
+}
+
+table{
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.5px solid #000;
+}
+th{
+    padding: 5px;
+}
+td{
+    border: 0.5px solid #000;
+    text-align: center;
+}
+.tituloA{
+    font-size: 18px;
+    font-family: 'Calibri Light';
+    color: #012368;
+}
+
+.headerTable{
+    background-color: #012368;
+    height: 30px;
+  }
+  
+.headerTable input[type="text"]{
+    background-color: transparent;
+    border: none;
+    color:#fff;
+    width: 80%;
+    text-align: center;
+    font-family: 'Calibri';
+    font-variant: small-caps;
+    font-size: 18px;
+}
+  
+ .clasificaciones {
+    appearance: none; /* Esto elimina los estilos predeterminados del sistema */
+    -webkit-appearance: none; /* Para navegadores webkit como Chrome y Safari */
+    -moz-appearance: none; /* Para navegadores Firefox */
+    text-indent: 0.01px; /* Esto evita que se muestre la flecha de selección en algunos navegadores */
+    text-overflow: ''; /* Esto evita el desbordamiento de texto en Safari */
+    border: none;
+    text-align: center;
+    font-weight: bold;
+  }
+
+tbody input[type="text"]{
+    text-align: center;
+}
+  
+.esconder{
+    display: none;
+}
