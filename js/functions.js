@@ -93,21 +93,15 @@ function crearColumnas(cantidadColumnas){
     return columna;
 }
 
-/* CODIGO PARA BUSCAR LA IMAGEN*/
-function seleccionarImagen() {
-    document.getElementById('inputImagen').click();
-  }
-  
-  document.getElementById('inputImagen').addEventListener('change', function() {
-    var archivo = this.files[0];
-    if (archivo) {
-      var lector = new FileReader();
-      lector.onload = function(e) {
-        document.getElementById('imagenSeleccionada').setAttribute('src', e.target.result);
-      }
-      lector.readAsDataURL(archivo);
-    }
-  });
+
+/* CODIGO PARA SELECCIONAR LA IMAGEN */
+let seleccionarImagen = d.getElementsByClassName("contenedorImg");
+
+seleccionarImagen[0].addEventListener("click",()=>{
+    let urlImg = prompt("Ingresar la URL de la imagen");
+    d.getElementById("imagenSeleccionada").src = urlImg;
+});
+
 
 
 
@@ -115,3 +109,27 @@ function seleccionarImagen() {
 function imprimir() {
     window.print();
 }
+
+var customSelects = document.querySelectorAll('.custom-select');
+    customSelects.forEach(function(select) {
+        var selectSelected = select.querySelector('.select-selected');
+        var selectItems = select.querySelector('.select-items');
+        var options = select.querySelectorAll('.select-items div');
+
+        selectSelected.addEventListener('click', function() {
+            selectItems.style.display = 'block';
+        });
+
+        options.forEach(function(option) {
+            option.addEventListener('click', function() {
+                selectSelected.textContent = this.textContent;
+                selectItems.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!select.contains(e.target)) {
+                selectItems.style.display = 'none';
+            }
+        });
+    });
